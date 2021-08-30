@@ -1,23 +1,31 @@
 ﻿using System;
 
-namespace DemoStruct
+namespace StructDemo
 {
-    public struct Person
-    {
-        public String name;
-        public int Age;
-        public int weight;
-    }
     class Program
     {
+        struct Student
+        {
+            internal string Name, Course;
+            internal int Sam, Rishu;
+
+        }
         static void Main(string[] args)
         {
-            Person p1;
-            p1.name = "Rushi";
-            p1.Age = 22;
-            p1.weight = 62;
-            Console.WriteLine("The Details of Person Is Name = " + p1.name + " Age = " + p1.Age + " Weigtht = " + p1.weight);
-            Console.ReadKey();
+            Student S1;
+            Console.Write("Enter Student Name: ");
+            S1.Name = Console.ReadLine();
+            Console.Write("Enter Student Course: ");
+            S1.Course = Console.ReadLine();
+            Console.Write("Enter Student ID: ");
+            S1.Sam = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Student Registration Number: ");
+            S1.Rishu = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Name\tCourse\tID\tReg No.");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}", S1.Name, S1.Course, S1.Sam, S1.Rishu);
+            Console.ReadKey(); 
         }
     }
 }
